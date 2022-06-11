@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../Smart Systems 2.0/css/estilosregister.css">
+    <title>Registro de usuario</title>
+</head>
+<body>
+    <section class="" style="background-image: linear-gradient(#028A0F, crimson);">
+        <div class="container py-5
+         vh-200">
+          <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col">
+              <div class="card card-registration my-4">
+                <div class="row">
+                  <div class="col-xl-6 d-none d-xl-block">
+                    <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/img4.webp"
+                      alt="Sample photo" class="img-fluid"
+                      style="border-top-left-radius: 1rem; border-bottom-left-radius: 1rem;" />
+                  </div>
+                  <div class="col-xl-6">
+                    <div class="card-body p-md-5 text-black">
+                      <img src="../smart-systems-ka/assets/img/logoss.png" style="margin-bottom: 40px;"  width="260px" height="40px">
+                        <!---Formulario-->
+                        <form class="row needs-validation" novalidate>
+                      <h3 style="padding-bottom: 40px;" class="mb-1 text-uppercase">Registre sus datos</h3>
+                      <div class="row">
+                        <!---primer nombre-->
+                        <div class="col-md-12 mb-4">
+                            <div class="input-group has-validation"></div>
+                            <div class="form-outline">
+                            <input type="text" id="form3Example1m" class="form-control form-control-lg" value="" required />
+                            <label class="form-label" for="form3Example1m">Nombres</label>
+                            <div class="invalid-feedback">Verifique los datos ingresados</div>
+                            <div class="valid-feedback"></div>
+                          </div>
+                        </div>
+                        <!---apellido-->
+                        <div class="col-md-12 mb-4">
+                          <div class="input-group has-validation"></div>
+                          <div class="form-outline">
+                            <input type="text" id="form3Example1n" class="form-control form-control-lg" value="" required />
+                            <label class="form-label" for="form3Example1n">Apellidos</label>
+                            <div class="invalid-feedback">Verifique los datos ingresados</div>
+                            <div class="valid-feedback"></div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="form-outline mb-4">
+                        <div class="input-group has-validation"></div>
+                        <input type="tel" id="form3Example9" class="form-control form-control-lg" value="" required/>
+                        <label class="form-label" for="form3Example9">Teléfono</label>
+                        <div class="invalid-feedback">Verifique los datos ingresados</div>
+                        <div class="valid-feedback"></div>
+                      </div>
+
+                      <div class="form-outline mb-4">
+                        <input type="text" id="form3Example8" class="form-control form-control-lg" value="" required />
+                        <label class="form-label" for="form3Example8">Dirección</label>
+                        <div class="invalid-feedback">Verifique los datos ingresados</div>
+                        <div class="valid-feedback"></div>
+                      </div>
+            
+                      <div class="row">
+                        <div class="col-md-6 mb-4">
+                          <div class="box">Selecciona el cargo</div>
+                          <select class= "select">
+                            <option selected>Elegir...</option>
+                            <option value="1">Gerente Financiero</option>
+                            <option value="2">Coordinador de proyectos</option>
+                            <option value="3">Almacenista</option>
+                          </select>
+                        </div>
+                      </div>
+      
+                      <div class="form-outline mb-4">
+                        <input type="mail" id="emailID" class="form-control form-control-lg" value="" required />
+                        <label class="form-label" for="emailID">Email ID</label>
+                        <div class="invalid-feedback">Verifique los datos ingresados</div>
+                        <div class="valid-feedback"></div>
+                      </div>
+      
+                      <div class="d-flex justify-content-end pt-3">
+                        <button type="submit" class="btn btn-outline-success">Borrar</button>
+                        <button type="submit" class="btn btn-success ms-2">Continuar</button>
+                      </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <script>
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (function () {
+          "use strict";
+  
+          // Fetch all the forms we want to apply custom Bootstrap validation styles to
+          var forms = document.querySelectorAll(".needs-validation");
+  
+          // Loop over them and prevent submission
+          Array.prototype.slice.call(forms).forEach(function (form) {
+            form.addEventListener(
+              "submit",
+              function (event) {
+                if (!form.checkValidity()) {
+                  event.preventDefault();
+                  event.stopPropagation();
+                }
+  
+                form.classList.add("was-validated");
+              },
+              false
+            );
+          });
+        })();
+      </script>
+</body>
+</html>

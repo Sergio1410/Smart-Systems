@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Modulo proveedores</title>
+        <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
+        <link href="css/styles.css" rel="stylesheet" />
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/js/bootstrap.min.js"></script>
+<!-- Datatables -->
+<link rel="stylesheet" href="https://cdn.datatables.net/v/bs4-4.1.1/dt-1.10.18/datatables.min.css">
+<script src="https://cdn.datatables.net/v/bs4-4.1.1/dt-1.10.18/datatables.min.js"></script>
+<!--font awesome-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" integrity="sha512-rqQltXRuHxtPWhktpAZxLHUVJ3Eombn3hvk9PHjV/N5DMUYnzKPC1i3ub0mEXgFzsaZNeJcoE0YHq0j/GFsdGg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="C:\Users\Usuario\Desktop\smart-systems-ka\js\dt.js">
+    </head>
+    <body class="sb-nav-fixed">
+        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-success">
+            <!-- Navbar Brand-->
+            <a class="navbar-brand ps-3" href="index.html"><img src="../startbootstrap-sb-admin-gh-pages/assets/img/logossmini.png" alt="logossmini"width="18" height="18" > Módulo proyectos</a>
+            <!-- Sidebar Toggle-->
+            <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
+            <!-- Navbar Search-->
+            <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+            </form>
+            <!-- Navbar-->
+            <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#!">Cambiar contraseña</a></li>
+                        <li><hr class="dropdown-divider" /></li>
+                        <li><a class="dropdown-item" href="#!">Cerrar sesión</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div id="layoutSidenav">
+            <div id="layoutSidenav_nav">
+                <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                    <div class="sb-sidenav-menu">
+                        <div class="nav">
+                            <div class="sb-sidenav-menu-heading"><img src="../startbootstrap-sb-admin-gh-pages/assets/img/reditech.jpg" alt="reditech" width="153" height="50"></div>
+                            <a class="nav-link" href="modulo-proyectos.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                Inicio
+                            </a>
+                            <div class="sb-sidenav-menu-heading">Opciones</div>
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseProyecto" aria-expanded="false" aria-controls="collapseLayouts">
+                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                                Proveedores
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="collapseProv" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="mod-prov-registro-proveedor.html">Registrar proveedor</a>
+                                    <a class="nav-link" href="../smart-systems-ka/mod-prov-actualizar-proveedor.html">Actualizar proveedor</a>
+                                    <a class="nav-link" href="../smart-systems-ka/mod-prov-archivar-proveedor.html">Archivar proveedor</a>
+                                </nav>
+                            </div>
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseProductos" aria-expanded="false" aria-controls="collapseLayouts">
+                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                                Productos
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="collapseProductos" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="../smart-systems-ka/mod-prod-registrar-prod.html">Registrar producto</a>
+                                    <a class="nav-link" href="../smart-systems-ka/mod-prod-actualizar-prod.html">Actualizar producto</a>
+                                    <a class="nav-link" href="../smart-systems-ka/mod-prod-archivar-prod.html">Archivar producto</a>
+                                </nav>
+                            </div>
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseRequi" aria-expanded="false" aria-controls="collapseLayouts">
+                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                                Requisiciones
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="collapseRequi" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="../smart-systems-ka/mod-requ-registrar-requ.html">Registrar requisición</a>
+                                    <a class="nav-link" href="../smart-systems-ka/mod-requ-actualizar-requ.html">Actualizar requisición</a>
+                                    <a class="nav-link" href="../smart-systems-ka/mod-requ-archivar-requ.html">Archivar requisición</a>
+                                </nav>
+                            </div>
+                            <div class="sb-sidenav-menu-heading">Consultas</div>
+                            <a class="nav-link" href="tables.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                                Consultas
+                            </a>
+                            <br>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <div id="layoutSidenav_content">
+                <main>
+                    <div class="container-fluid px-4">
+                        <h1 class="mt-4">Proveedores</h1>
+                        <div class="container-fluid px-12">
+                            <div class="row">
+                                <div class="col-xl-12">
+                                </div>
+                                <div class="col-xl-12">
+                                    <div class="card mb-2">
+                                        <div class="card-header">
+                                       
+                               
+                            <!-- Buttons -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.6.2/css/buttons.dataTables.min.css">
+    <script src="https://cdn.datatables.net/buttons/1.6.2/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.2/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.53/build/pdfmake.min.js"></script>
+    <script src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.53/build/vfs_fonts.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.2/js/buttons.flash.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.2/js/buttons.print.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+
+    <!--JUSTIFICA EL ANCHO DE COLUMNAS AL 100% DENTRO DE LAS PÁGINAS Y ESCONDE EL SCROLL HORIZONTAL-->
+    <style>
+        #mydatatable tfoot input {
+            width: 100% !important;
+        }
+
+        #mydatatable tfoot {
+            display: table-header-group !important;
+        }
+
+
+        .thead-green {
+          background-color: #28a745;
+          color: white;
+        }
+
+        .table-striped tbody tr:nth-of-type(odd) {
+          background-color: rgb(217, 235, 235);
+        }
+
+        .table-hover tbody tr:hover {
+              background-color: rgba(137, 184, 168, 0.445);
+              color: rgb(112, 24, 24);
+        }
+    </style>
+</head>
+
+<body class="container-fluid p-5">
+    <div class="table-responsive" id="mydatatable-container">
+        <table class="records_list table table-striped table-bordered table-hover" id="mydatatable">
+            <thead class="thead-green">
+                <tr>
+                    <th>NIT PROVEEDOR</th>
+                    <th>TELEFONO</th>
+                    <th>EMAIL</th>
+                    <th>OBSERVACIONES</th>
+                </tr>
+            </thead>
+            <tfoot>
+                <tr>
+                    <th>Filter</th>
+                    <th>Filter</th>
+                    <th>Filter</th>
+                    <th>Filter</th>
+                </tr>
+            </tfoot>
+            <tbody>
+                <tr>
+                    <td>item 0 0</td>
+                    <td>item 0 1</td>
+                    <td>item 0 2</td>
+                    <td>item 0 3</td>
+                </tr>
+                <tr>
+                    <td>item 0 8</td>
+                    <td>item 0 9</td>
+                    <td>item 1 0</td>
+                    <td>item 1 1</td>
+                </tr>
+                <tr>
+                    <td>item 1 6</td>
+                    <td>item 1 7</td>
+                    <td>item 1 8</td>
+                    <td>item 1 9</td>
+                    <tr>
+                        <td>item 2 4</td>
+                        <td>item 2 5</td>
+                        <td>item 2 6</td>
+                        <td>item 2 7</td>
+                </tr>
+                <tr>
+                    <td>item 3 2</td>
+                    <td>item 3 3</td>
+                    <td>item 3 4</td>
+                    <td>item 3 5</td>
+                </tr>
+                <tr>
+                    <td>item 3 2</td>
+                    <td>item 3 3</td>
+                    <td>item 3 4</td>
+                    <td>item 3 5</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="float-left">
+        <button class="btn btn-success type="#"><i class="fa fa-fw fa-lg fa-check-circle"></i>Ingresar</button>
+        <button class="btn btn-success type="#"><i class="fa fa-fw fa-lg fa-check-circle"></i>Actualizar</button>
+        <a href=""><button class="btn btn-success type=""><i class="fa fa-fw fa-lg fa-check-circle"></i>Guardar</button></a>
+        <button class="btn btn-success" type="#"><i class="fa fa-fw fa-lg fa-check-circle"></i>Enviar</button>           
+      </div>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#mydatatable tfoot th').each(function () {
+                var title = $(this).text();
+                $(this).html('<input type="text" placeholder="Filtrar.." />');
+            });
+
+            var table = $('#mydatatable').DataTable({
+                "dom": 'B<"float-left"i><"float-right"f>t<"float-left"l><"float-right"p><"clearfix">',
+                "responsive": true,
+                "language": {
+                    /* DEFINE EL IDIOMA EN QUE SE MOSTRARÁ LA INFO Y MENSAJES DE BUSQUEDA*/
+                    "url": "https://cdn.datatables.net/plug-ins/1.10.19/i18n/Spanish.json"
+                },
+                "order": [
+                    [0, "desc"]
+                ],
+                "initComplete": function () {
+                    this.api().columns().every(function () {
+                        var that = this;
+
+                        $('input', this.footer()).on('keyup change', function () {
+                            if (that.search() !== this.value) {
+                                that
+                                    .search(this.value)
+                                    .draw();
+                            }
+                        });
+                    })
+                },
+                /* SE DEFINE EL ARREGLO DE BOTONES QUE SE VAN A MOSTRAR - OCULTA EL BOTON DE COPIAR*/
+                "buttons": [
+                    {
+                        extend: 'csvHtml5',
+                        text:   '<i class="fas fa-file-csv"></i>',
+                        titleAttr: 'Export a Csv',
+                        className: 'btn btn-secondary' 
+                    },
+                    {
+                        extend: 'excelHtml5',
+                        text:   '<i class="fas fa-file-excel"></i>',
+                        titleAttr: 'Export a Excel',
+                        className: 'btn btn-success' 
+                    },
+
+                    {
+                        extend: 'pdfHtml5',
+                        text:   '<i class="fas fa-file-pdf"></i>',
+                        titleAttr: 'Export a .Pdf',
+                        className: 'btn btn-primary' 
+                    },
+
+                    {
+                        extend: 'print',
+                        text:   '<i class="fa fa-print" aria-hidden="true"></i>',
+                        titleAttr: 'Imprimir',
+                        className: 'btn btn-primary' 
+                    },
+                   /* 'csv', 'excel', 'pdf', 'print' */
+                ]
+            });
+        });
+    </script>
+                       
+                        </div>
+                    </div>
+                </main>
+                <footer class="py-4 bg-light mt-auto">
+                    <div class="container-fluid px-4">
+                        <div class="d-flex align-items-center justify-content-between small">
+                            <div class="text-muted">Copyright &copy; Smart Systems 2022</div>
+                            <div>
+                                <a href="#">Privacy Policy</a>
+                                &middot;
+                                <a href="#">Terms &amp; Conditions</a>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="js/scripts.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+        <script src="assets/demo/chart-area-demo.js"></script>
+        <script src="assets/demo/chart-bar-demo.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
+        <script src="js/datatables-simple-demo.js"></script>
+    </body>
+</html>
